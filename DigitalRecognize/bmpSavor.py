@@ -30,10 +30,10 @@ sensor.set_framesize(sensor.QVGA)
 #sensor.set_windowing((320, 240))
 sensor.set_pixformat(sensor.RGB565)
 
-#垂直翻转
-sensor.set_vflip(True)
-#水平镜像
-sensor.set_hmirror(True)
+##垂直翻转
+#sensor.set_vflip(True)
+##水平镜像
+#sensor.set_hmirror(True)
 
 sensor.skip_frames(time = 2500)
 
@@ -41,7 +41,7 @@ FILE_NAME = "1-3"
 time.sleep_ms(15000)
 img = sensor.snapshot()
 # 注意：请参阅文档查看其他参数
-img.save("/%s.pgm"%(FILE_NAME))
+img.save("/%s.bmp"%(FILE_NAME))
 
 time.sleep_ms(100)
 raise(Exception("Done! Please reset the camera"))
